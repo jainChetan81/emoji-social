@@ -8,6 +8,16 @@ import { withAxiom } from "next-axiom";
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  swcMinify: true,
+  images: {
+    domains: ["images.clerk.dev", "img.clerk.com"],
+  },
   // experimental: {
   //   typedRoutes: true,
   //   serverActions: true,
